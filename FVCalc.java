@@ -15,16 +15,8 @@ public class FVCalc {
 		// Calculate future value using the formula: currentValue * (1 + rate)^years
 		int futureValueInt = (int) (currentValue * Math.pow(1 + rate, years));
 
-		// Prepare a clean rate string: show whole numbers as "5" and decimals as "12.5"
-		String rateStr;
-		if (rateInput == (long) rateInput) {
-			rateStr = Long.toString((long) rateInput);
-		} else {
-			rateStr = Double.toString(rateInput);
-		}
-
 		// Print the result with the cleaned rate string and integer future value
 		System.out.println("After " + years + " years, $" + currentValue +
-						" saved at " + rateStr + "% will yield $" + futureValueInt);
+						" saved at " + rateInput + "% will yield $" + futureValueInt);
 	}
 }
