@@ -5,7 +5,8 @@ public class NumWords {
 		int number = Integer.parseInt(args[0]);
 
 		// Calculate hundreds, tens, and ones
-		int hundreds = (number / 100) % 10;
+		// hundreds should be the total count of hundreds (e.g., 2024 -> 20 hundreds)
+		int hundreds = number / 100;
 		int tens = (number / 10) % 10;
 		int ones = number % 10;
 
