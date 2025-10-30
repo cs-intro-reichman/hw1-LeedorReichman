@@ -12,6 +12,31 @@ public class TimeFormat {
 		int hours = Integer.parseInt("" + args[0].charAt(0) + args[0].charAt(1));
 		// Does the same with the minutes part of the input.
 		int minutes = Integer.parseInt("" + args[0].charAt(3) + args[0].charAt(4));
-        // Replace this comment with the rest of your code
+
+		// Determine if it's AM or PM and convert hours to 12-hour format
+		String ampm = "AM";
+		
+		// Handle PM cases (noon to 11:59 PM)
+		if (hours >= 12) {
+			ampm = "PM";
+			if (hours > 12) {
+				hours = hours - 12;
+			}
+		}
+		
+		// Handle midnight (00:00)
+		if (hours == 0) {
+			hours = 0;
+		}
+		
+		// Build the output string
+		// Hours (no leading zero) + ":" + Minutes (with leading zero) + AM/PM
+		System.out.print(hours + ":");
+		
+		// Add leading zero to minutes if needed
+		if (minutes < 10) {
+			System.out.print("0");
+		}
+		System.out.print(minutes + " " + ampm);
 	}
 }
