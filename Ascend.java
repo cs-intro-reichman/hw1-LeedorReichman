@@ -1,5 +1,5 @@
-/* Very clean code. Well done 
-*/
+/* very clean. good job */
+
 
 // Generates three integer random numbers in a given range,
 // and prints them in increasing order.
